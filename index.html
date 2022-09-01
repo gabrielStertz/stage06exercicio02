@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>GitHub Favorites</title>
 </head>
@@ -10,17 +13,55 @@
   <div id="app">
     <header>
       <h1>GitHub Favorites</h1>
-      <div>
-        <label for="input-search">Usuário do GitHub</label>
+      <div class="search">
+        <label class="sr-only" for="input-search">Usuário do GitHub</label>
         <input id="input-search" type="text" placeholder="Usuário do GitHub">
         <button>&plus;</button>
       </div>
     </header>
     <table>
-
+      <thead>
+        <tr>
+          <th>Usuário</th>
+          <th>Repositórios</th>
+          <th>Seguidores</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="user">
+            <img src="https://github.com/gabrielStertz.png" alt="Imagem do usuário pesquisado">
+            <a href="https://github.com/gabrielStertz" target="_blank">
+              <p>Gabriel Stertz</p>
+              <span>gabrielStertz</span>
+            </a>
+          </td>
+          <td class="repositories">18</td>
+          <td class="followers">00</td>
+          <td>
+            <button class="remove">&times;</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="user">
+            <img src="https://github.com/diego3g.png" alt="Imagem do usuário pesquisado">
+            <a href="https://github.com/diego3g" target="_blank">
+              <p>Diego Fernandes</p>
+              <span>diego3g</span>
+            </a>
+          </td>
+          <td class="repositories">48</td>
+          <td class="followers">22503</td>
+          <td>
+            <button class="remove">&times;</button>
+          </td>
+        </tr>
+      </tbody>
+      
     </table>
   </div>
 
-  <script src="./js/script.js" type="module"></script>
+  <script src="./js/main.js" type="module"></script>
 </body>
 </html>
